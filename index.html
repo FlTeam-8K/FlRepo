@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='https://content.jwplatform.com/libraries/zgIRUsiD.js'></script>
+</head>
+
+<body>
+    <div data-poster='https://img.freepik.com/premium-photo/example-concept-example-word-written-wooden-block-example-text-table-business-example-concept_35148-12307.jpg' data-video='https://raw.githubusercontent.com/FlTeam-8K/FlRepo/main/Otakudesu_OreImo--01_480p.mp4' data-title='judul_video' id='player-jw'></div>
+<script type='text/javascript'>
+  (function(a) {
+    let plyElement = a.getElementById('player-jw');
+    if (!plyElement)
+      return;
+    if (typeof jwplayer == 'function') {
+      let jw = jwplayer('player-jw');
+      jw.setup({
+        title: plyElement.dataset.title,
+        sources: [{
+          'file': plyElement.dataset.video,
+          'type': 'video/mp4',
+        }],
+        image: plyElement.dataset.poster
+      });
+    }
+  })(document);
+</script>
+      
+</body>
+
+</html>
